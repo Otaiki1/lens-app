@@ -84,6 +84,9 @@ export default function Profile({ params: { handle } }) {
         <h1 className="text-3xl my-3">{profile?.handle}</h1>
         <h3 className="text-xl mb-4">{profile?.bio}</h3>
         {profile && <Publications profile={profile} />}
+        {!profile && (
+          <h3 className="text-xl mb-4 text-red-700">Profile NOT FOUND</h3>
+        )}
       </div>
     </div>
   );
